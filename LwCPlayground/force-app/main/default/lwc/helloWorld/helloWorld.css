@@ -7,6 +7,8 @@ div.customColor{
     font-weight:900;
 }
 
+
+/* To access enclosing template */
 :host{
     border: 20px solid red;
 }
