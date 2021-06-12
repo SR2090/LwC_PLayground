@@ -1,0 +1,12 @@
+/* do not use id selector as the page gets 
+loaded dynamically and the id's get rerendered */
+
+div.customColor{
+    color: red;
+    font-family:cursive;
+    font-weight:900;
+}
+
+:host{
+    border: 20px solid red;
+}
