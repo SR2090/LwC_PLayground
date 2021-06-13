@@ -5,5 +5,5 @@ export default class ConditionalRendering extends LightningElement {
     handleCheck(event){
         console.log(event.detail.checked);
         this.condition = event.detail.checked;
-    }
+ z`   }
 }
