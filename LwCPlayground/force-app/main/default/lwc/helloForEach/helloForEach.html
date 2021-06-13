@@ -1,3 +1,10 @@
 <template>
-    
+    <lightning-card>
+        <template for:each={contacts} for:index="index" for:item="contact">
+            <li key={contact.Id}>
+                <p>"index"</p>
+                <p>{contact.Name} {contact.Title}</p>
+            </li>
+        </template>
+    </lightning-card>
 </template>
