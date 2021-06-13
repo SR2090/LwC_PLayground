@@ -1,3 +1,10 @@
 <template>
-    
+    <lightning-card title="Calculator">
+    <lightning-input style="padding-top:25px; padding-left:5px ; padding-right:5px" type="number" name="input1" label="Number 1"></lightning-input>
+    <lightning-input style="padding-bottom:25px; padding-left:5px; padding-right:5px" type="number" name="input2" label="Number 2"></lightning-input>
+    <lightning-button variant="brand-outline" label="Addition +" title="Primary action with lighter look" onclick={handleAdd} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand-outline" label="Subtrack -" title="Primary action with lighter look" onclick={handleSub} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand-outline" label="Product  x" title="Primary action with lighter look" onclick={handleMul} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="brand-outline" label="Divide   /" title="Primary action with lighter look" onclick={handleDiv} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
 </template>
