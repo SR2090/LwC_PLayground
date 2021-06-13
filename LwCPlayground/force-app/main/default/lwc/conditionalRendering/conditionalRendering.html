@@ -1,3 +1,14 @@
 <template>
-    
+    <lightning-input type="checkbox" label="Show" onchange={handleCheck}>
+        <template if:true={condition}>
+            <div>
+                Condition is false
+            </div>
+        </template>
+        <template if:false={condition}>
+            <div>
+                Condition is false
+            </div>
+        </template>
+    </lightning-input>
 </template>
