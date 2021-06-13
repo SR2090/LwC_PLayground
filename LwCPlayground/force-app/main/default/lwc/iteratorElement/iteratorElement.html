@@ -1,7 +1,19 @@
 <template>
     <lightning-card>
         <template iterator:eachcontact={contacts}>
-
+            <div key={eachcontact.value.Id}>
+                <template if:true={eachcontact.first}>
+                    <h2>First Element : Index {eachcontact.index}</h2>
+                </template>
+            </div>
+            <p key={eachcontact.value.Id}>
+                <span>{eachcontact.index}. {eachcontact.value.Name} {eachcontact.value.Title}</span>
+            </p>
+            <div key={eachcontact.value.Id}>
+                <template if:true={eachcontact.last}>
+                    <h2>Last Element: Index {eachcontact.index}</h2>
+                </template>
+            </div>
         </template>
     </lightning-card>
 </template>
