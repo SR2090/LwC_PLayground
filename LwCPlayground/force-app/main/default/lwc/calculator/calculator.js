@@ -43,5 +43,8 @@ export default class Calculator extends LightningElement {
         }
         console.log(this.Result, typeof(this.Result));
     }
+    showHistory(){
+        
+    }
     
 }
