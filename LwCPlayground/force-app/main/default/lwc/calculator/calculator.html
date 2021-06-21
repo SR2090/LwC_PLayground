@@ -2,17 +2,17 @@
     <lightning-card title="Simple Calculator" icon-name="utility:formula">
         <lightning-layout multiple-rows>
             <lightning-layout-item size="12" padding="around-medium">
-                <lightning-input label="Num 1" name="Number1" onchange={inputHandler} type="number"></lightning-input>
+                <lightning-input label="Num 1" name="Number1" onchange={inputHandler1} type="number"></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item size="12" padding="around-medium">
-                <lightning-input label="Num 2" name="Number2" onchange={inputHandler} type="number"></lightning-input>
+                <lightning-input label="Num 2" name="Number2" onchange={inputHandler2} type="number"></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item padding="around-medium">
                 <lightning-button-group>
-                    <lightning-button label="Add" icon-name="utility:add" icon-position="right"></lightning-button>
-                    <lightning-button label="Sub" icon-name="utility:dash" icon-position="right"></lightning-button>
-                    <lightning-button label="Mul" icon-name="utility:close" icon-position="right"></lightning-button>
-                    <lightning-button label="Div" icon-name="utility:magicwand" icon-position="right"></lightning-button>
+                    <lightning-button label="Add" icon-name="utility:add" icon-position="right" onclick={addHandler}></lightning-button>
+                    <lightning-button label="Sub" icon-name="utility:dash" icon-position="right" onclick={subHandler}></lightning-button>
+                    <lightning-button label="Mul" icon-name="utility:close" icon-position="right" onclick={mulHandler}></lightning-button>
+                    <lightning-button label="Div" icon-name="utility:magicwand" icon-position="right" onclick={divHandler}></lightning-button>
                 </lightning-button-group>
             </lightning-layout-item>
             <lightning-layout-item size="12" padding="around-medium">
