@@ -4,6 +4,7 @@ export default class Calculator extends LightningElement {
     Number1;
     Number2;
     Result = "";
+    Queue = [];
     inputHandler(event){
         if(event.target.name === "Number1"){
             this.Number1 = event.detail.value;
@@ -44,7 +45,7 @@ export default class Calculator extends LightningElement {
         console.log(this.Result, typeof(this.Result));
     }
     showHistory(){
-        
+
     }
     
 }
