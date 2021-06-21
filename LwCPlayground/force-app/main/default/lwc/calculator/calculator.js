@@ -3,7 +3,7 @@ import { LightningElement, track } from 'lwc';
 export default class Calculator extends LightningElement {
     Number1;
     Number2;
-    Result;
+    Result = "";
     inputHandler(event){
         if(event.target.name === "Number1"){
             this.Number1 = event.detail.value;
@@ -15,7 +15,7 @@ export default class Calculator extends LightningElement {
         if(this.Number1 === undefined || this.Number1 === undefined){
 
         }else{
-            this.Result = parseInt(this.Number1) + parseInt(this.Number2);
+            this.Result = `${parseInt(this.Number1) + parseInt(this.Number2)}`;
         }
         console.log(this.Result, typeof(this.Result));
     }
@@ -23,7 +23,7 @@ export default class Calculator extends LightningElement {
         if(this.Number1 === undefined || this.Number1 === undefined){
 
         }else{
-            this.Result = parseInt(this.Number1) - parseInt(this.Number2);
+            this.Result = `${parseInt(this.Number1) - parseInt(this.Number2)}`;
         }
         console.log(this.Result, typeof(this.Result));
     }
@@ -31,7 +31,7 @@ export default class Calculator extends LightningElement {
         if(this.Number1 === undefined || this.Number1 === undefined){
 
         }else{
-            this.Result = parseInt(this.Number1) * parseInt(this.Number2);
+            this.Result = `${parseInt(this.Number1) * parseInt(this.Number2)}`;
         }
         console.log(this.Result, typeof(this.Result));
     }
@@ -39,7 +39,7 @@ export default class Calculator extends LightningElement {
         if(this.Number1 === undefined || this.Number1 === undefined){
 
         }else{
-            this.Result = parseInt(this.Number1) / parseInt(this.Number2);
+            this.Result = `${parseInt(this.Number1) / parseInt(this.Number2)}`;
         }
         console.log(this.Result, typeof(this.Result));
     }
