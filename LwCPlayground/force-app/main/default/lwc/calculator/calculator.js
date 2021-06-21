@@ -4,8 +4,13 @@ export default class Calculator extends LightningElement {
     Number1;
     Number2;
     inputHandler(event){
-        this.Number1 = event.detail.value;
-        this.Number2 = event.detail.value;
+        if(event.target.name === "Number1"){
+            this.Number1 = event.detail.value;
+        }else{
+            this.Number2 = event.detail.value;
+        }
+        
+        
         console.log(this.Number1,this.Number2)
     }
 }
