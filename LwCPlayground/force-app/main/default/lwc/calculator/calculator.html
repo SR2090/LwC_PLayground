@@ -2,10 +2,10 @@
     <lightning-card title="Simple Calculator" icon-name="utility:formula">
         <lightning-layout multiple-rows>
             <lightning-layout-item size="12" padding="around-medium">
-                <lightning-input label="Num 1" name="Number1" onchange="inputHandler" type="number"></lightning-input>
+                <lightning-input label="Num 1" name="Number1" onchange={inputHandler} type="number"></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item size="12" padding="around-medium">
-                <lightning-input label="Num 2" name="Number2" onchange="inputHandler" type="number"></lightning-input>
+                <lightning-input label="Num 2" name="Number2" onchange={inputHandler} type="number"></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item padding="around-medium">
                 <lightning-button-group>
