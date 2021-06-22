@@ -1,5 +1,5 @@
 import { LightningElement, track } from 'lwc';
-
+import {Stack} from 'stackJs.js';
 export default class Calculator extends LightningElement {
     Number1;
     Number2;
