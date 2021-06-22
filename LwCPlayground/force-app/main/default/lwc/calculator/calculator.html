@@ -23,10 +23,17 @@
                 </lightning-input>
             </lightning-layout-item>
             
-            <lightning-layout-item size="12" padding="around-medium">
-                <template if:true={status}>
+            <lightning-layout-item size="12" padding="around-small">
+                <template if:true={status} class="slds-m-around_small">
                     <template iterator:eachresult={Stack} >
+                        <li key={eachresult.value} class="slds-p-top_small" if:true={eachresult.first}>
+                            {eachresult.value}
+                        </li>
+                        
                         <li key={eachresult.value}>{eachresult.value}</li>
+                        <li key={eachresult.value} class="slds-p-bottom_small" if:true={eachresult.last}>
+                            {eachresult.value}
+                        </li>
                     </template>
                 </template>
             </lightning-layout-item>
