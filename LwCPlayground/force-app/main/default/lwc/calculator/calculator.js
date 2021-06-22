@@ -4,8 +4,9 @@ export default class Calculator extends LightningElement {
     Number1;
     Number2;
     Result = "";
-    Stack = [];
+   @track Stack = [];
     status = false;
+    
     inputHandler(event){
         if(event.target.name === "Number1"){
             this.Number1 = event.detail.value;
@@ -28,6 +29,7 @@ export default class Calculator extends LightningElement {
         }else{
             this.Result = `Result of Subtracting ${this.Number2} from ${this.Number2} is ${parseInt(this.Number1) - parseInt(this.Number2)}`;
         }
+        this.Stack.push(this.Result);
         console.log(this.Result, typeof(this.Result));
     }
     mulHandler(){
@@ -36,6 +38,7 @@ export default class Calculator extends LightningElement {
         }else{
             this.Result = `Result of Multiplying ${this.Number1} and ${this.Number2} is ${parseInt(this.Number1) * parseInt(this.Number2)}`;
         }
+        this.Stack.push(this.Result);
         console.log(this.Result, typeof(this.Result));
     }
     divHandler(){
@@ -44,12 +47,12 @@ export default class Calculator extends LightningElement {
         }else{
             this.Result = `Result of Divding ${this.Number1} from ${this.Number2} is ${parseInt(this.Number1) / parseInt(this.Number2)}`;
         }
+        this.Stack.push(this.Result);
         console.log(this.Result, typeof(this.Result));
     }
     showHistory(event){
-        status = event.detail.checked;  
-        console.log(status)    
+        this.status = event.detail.checked;    
+        console.log(this.Stack)
     }
-
     
 }
