@@ -5,7 +5,7 @@ export default class Calculator extends LightningElement {
     Number2;
     Result = "";
     Stack = [];
-    status = true;
+    status = false;
     inputHandler(event){
         if(event.target.name === "Number1"){
             this.Number1 = event.detail.value;
@@ -17,7 +17,7 @@ export default class Calculator extends LightningElement {
         if(this.Number1 === undefined || this.Number1 === undefined){
 
         }else{
-            this.Result = `Result of Adding ${this.Number1} and ${this.Number2} is ${parseInt(this.Number1) + parseInt(this.Number2)}`;
+            this.Result = `Result of Adding ${this.Number1} with ${this.Number2} is ${parseInt(this.Number1) + parseInt(this.Number2)}`;
         }
         this.Stack.push(this.Result);
         console.log(this.Result, typeof(this.Result));
