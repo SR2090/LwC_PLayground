@@ -2,10 +2,10 @@
     <lightning-card title={titleForLwc} >
         <lightning-layout multiple-rows>
             <lightning-layout-item size="12" padding="around-medium">
-                <lightning-input type="number" label="Height" name="Height"></lightning-input>
+                <lightning-input type="number" label="Height" name="Height" onchange={getValues}></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item size="12" padding="around-medium">
-                <lightning-input type="number" label="Weight" name="Weight"></lightning-input>
+                <lightning-input type="number" label="Weight" name="Weight" onchange={getValues}></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item size="" padding="around-medium">
                 <lightning-button label="Calculate BMI" title="Non-primary action" onclick={handleClick} class="slds-p-bottom_medium"></lightning-button>
