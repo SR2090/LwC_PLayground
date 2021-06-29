@@ -2,19 +2,21 @@
     <lightning-card title={titleForLwc} >
         <lightning-layout multiple-rows>
             <lightning-layout-item size="12" padding="around-medium">
-                <lightning-input type="number" label="Height" name="Height" onchange={getValues}></lightning-input>
+                <lightning-input type="number" label="Height" name="Height" step="0.01" onchange={getValues}></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item size="12" padding="around-medium">
-                <lightning-input type="number" label="Weight" name="Weight" onchange={getValues}></lightning-input>
+                <lightning-input type="number" label="Weight" name="Weight" step="0.01" onchange={getValues}></lightning-input>
             </lightning-layout-item>
-            <lightning-layout-item size="" padding="around-medium">
+            <lightning-layout-item size="6" padding="around-medium">
                 <lightning-button label="Calculate BMI" title="Non-primary action" onclick={handleClick} class="slds-p-bottom_medium"></lightning-button>
             </lightning-layout-item>
-            <template if:true={btnView}>
-                <p>
-                    This should be hidden
-                </p>
-            </template>
+            <lightning-layout-item size="6" padding="around-medium">
+                <template if:true={btnView} class="slds-p-around_medium">
+                    <p>
+                        BMI: {Result}
+                    </p>
+                </template>
+            </lightning-layout-item>
         </lightning-layout>
     </lightning-card>
 </template> 
