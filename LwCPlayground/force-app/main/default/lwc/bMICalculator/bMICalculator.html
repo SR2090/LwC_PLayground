@@ -10,6 +10,11 @@
             <lightning-layout-item size="" padding="around-medium">
                 <lightning-button label="Calculate BMI" title="Non-primary action" onclick={handleClick} class="slds-p-bottom_medium"></lightning-button>
             </lightning-layout-item>
+            <template if:true={btnView}>
+                <p>
+                    This should be hidden
+                </p>
+            </template>
         </lightning-layout>
     </lightning-card>
 </template> 
