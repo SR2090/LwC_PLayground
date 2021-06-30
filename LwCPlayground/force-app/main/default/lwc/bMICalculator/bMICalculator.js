@@ -2,7 +2,7 @@ import { LightningElement,  } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class BMICalculator extends LightningElement {
-    titleForLwc = "BMI Calculator 12";
+    titleForLwc = "BMI Calculator";
     Height;
     Weight;
     btnView = false;
@@ -14,7 +14,7 @@ export default class BMICalculator extends LightningElement {
         }
         if(event.target.name === "Weight"){
             this.Weight= parseFloat(event.detail.value);
-            console.log(event.detail.value);
+            //console.log(event.detail.value);
         }
     }
    
@@ -26,14 +26,12 @@ export default class BMICalculator extends LightningElement {
             variant: 'error',
             mode: 'dismissable'
         });
-        // if(typeof this.Height == "undefined" || typeof this.Weight == "undefined"){
-        //     this.dispatchEvent(evt);  
-        //     console.log(this.Height, this.Weight);       
-        // }else{
-            
-            this.Result = ( parseFloat(this.Weight)/ (parseFloat(this.Height) * parseFloat(this.Height))).toPrecision(2);
-            console.log(this.Result)
-        // }
+        if(typeof this.Height == "undefined" || typeof this.Weight == "undefined"){
+            this.dispatchEvent(evt);    
+        }else{    
+            this.Result = ( this.Weight/ this.Height * this.Height).toPrecision(2);
+            console.log(this.Height, this.Weight)
+        }
         // console.log(this.Height);   
         // console.log(event.detail.value);
     }
