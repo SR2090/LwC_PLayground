@@ -1,3 +1,11 @@
 <template>
+    <ul>
+        <!-- {roomName:'A-01', roomCapacity:'12'} -->
+        <template for:each={MeetingRooms} for:item="eachRoom">
+            
+               <li key={eachRoom.roomName}>{eachRoom.roomName}  {eachRoom.roomCapacity}</li> 
+            
+        </template>
+    </ul>
     
 </template>
