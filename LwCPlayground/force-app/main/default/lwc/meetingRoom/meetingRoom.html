@@ -1,13 +1,11 @@
 <template>
     <lightning-card title="Meeting Room">
         <div class="slds-m-top_medium slds-m-bottom_x-large"></div>
-
         <!-- Simple -->
         <div class="slds-p-around_medium lgc-bg">
-            <lightning-tile label= {infomeetingRoom.roomName} href="#">
-                <p class="slds-truncate" title={infomeetingRoom.roomCapacity}>Room Capacity: {infomeetingRoom.roomCapacity}</p>
+            <lightning-tile label= {room.roomName} style="font-weight:800" href="#">
+                <p class="slds-truncate" title={room.roomCapacity} style="color:red;">Room Capacity: {room.roomCapacity}</p>
             </lightning-tile>
         </div>
-    </div>
     </lightning-card>
 </template>
