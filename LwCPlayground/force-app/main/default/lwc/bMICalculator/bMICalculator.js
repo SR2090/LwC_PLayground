@@ -6,7 +6,7 @@ export default class BMICalculator extends LightningElement {
     @track BmiData = {
         Height : 0,
         Weight : 0,
-        Result : 0,
+        Result : 0
     }
     
     btnView = false;
@@ -23,7 +23,7 @@ export default class BMICalculator extends LightningElement {
     }
    
     handleClick(event){
-        this.BmiData.btnView = true;
+        this.btnView = true;
         const evt = new ShowToastEvent({
             title: 'Blank input',
             message: 'Please enter input values',
@@ -32,9 +32,12 @@ export default class BMICalculator extends LightningElement {
         });
         if(typeof this.BmiData.Height == "undefined" || typeof this.BmiData.Weight == "undefined"){
             this.dispatchEvent(evt);    
-        }else{    
-            this.BmiData.Result = ( this.BmiData.Weight/ this.BmiData.Height * this.BmiData.Height).toPrecision(2);
-            console.log(this.BmiData.Height, this.BmiData.Weight)
+        }else{
+            let temp = this.BmiData.Height * this.BmiData.Height;
+            let deno = this.BmiData.Weight;
+            let res = deno / temp
+            this.BmiData.Result = res.toPrecision(2);
+            console.log(res,typeof res,deno,typeof deno,temp,typeof temp,this.BmiData.Result, typeof this.BmiData.Result);
         }
     }
 }
