@@ -1,9 +1,9 @@
-import { LightningElement,  } from 'lwc';
+import { LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class BMICalculator extends LightningElement {
     titleForLwc = "BMI Calculator";
-    BmiData = {
+    @track BmiData = {
         Height : 0,
         Weight : 0,
         Result : 0,
