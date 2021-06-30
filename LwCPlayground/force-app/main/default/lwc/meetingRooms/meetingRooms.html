@@ -2,9 +2,10 @@
     <ul>
         <!-- {roomName:'A-01', roomCapacity:'12'} -->
         <template for:each={MeetingRooms} for:item="eachRoom">
-            
-               <li key={eachRoom.roomName}>{eachRoom.roomName}  {eachRoom.roomCapacity}</li> 
-            
+               <li key={eachRoom.roomName}>
+                   <!-- We will call the child component here -->
+                    <c-meeting-room></c-meeting-room>
+               </li> 
         </template>
     </ul>
     
