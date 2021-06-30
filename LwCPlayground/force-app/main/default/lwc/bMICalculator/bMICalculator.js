@@ -32,7 +32,5 @@ export default class BMICalculator extends LightningElement {
             this.Result = ( this.Weight/ this.Height * this.Height).toPrecision(2);
             console.log(this.Height, this.Weight)
         }
-        // console.log(this.Height);   
-        // console.log(event.detail.value);
     }
 }
