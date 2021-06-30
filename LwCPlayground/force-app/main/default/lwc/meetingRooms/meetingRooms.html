@@ -2,9 +2,10 @@
     <ul>
         <!-- {roomName:'A-01', roomCapacity:'12'} -->
         <template for:each={MeetingRooms} for:item="eachRoom">
-               <li key={eachRoom.roomName}>
+               <li key={eachRoom.roomName} style="padding: 10px">
                    <!-- We will call the child component here -->
-                    <c-meeting-room></c-meeting-room>
+                   <!-- Public api will also be converted to kebab case all lower case-->
+                    <c-meeting-room info-meeting-room={eachRoom}></c-meeting-room>
                </li> 
         </template>
     </ul>
