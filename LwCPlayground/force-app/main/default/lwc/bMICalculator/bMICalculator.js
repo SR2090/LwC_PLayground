@@ -37,7 +37,6 @@ export default class BMICalculator extends LightningElement {
             let deno = this.BmiData.Weight;
             let res = deno / temp
             this.BmiData.Result = res.toPrecision(2);
-            console.log(res,typeof res,deno,typeof deno,temp,typeof temp,this.BmiData.Result, typeof this.BmiData.Result);
         }
     }
 }
