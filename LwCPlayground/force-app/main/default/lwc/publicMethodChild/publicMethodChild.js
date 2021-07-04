@@ -24,7 +24,15 @@ export default class PublicMethodChild extends LightningElement {
     // this must be called from the parent method so we need to make it public.
     @api
     selectCheckBox(ValueOfCheckBox){
-
+        // check if the value exist in the option
+        const condition = this.options.find(val => {
+            return ValueOfCheckBox === val.value;
+        });
+        if(condition === true){
+            this.value = ValueOfCheckBox;
+            return "Success"
+        }   
+        return "No checkbox found";
     }
 
 }
