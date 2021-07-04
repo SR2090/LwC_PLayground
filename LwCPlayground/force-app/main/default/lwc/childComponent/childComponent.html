@@ -1,3 +1,7 @@
 <template>    
-        <span>Son => {childName}</span>
+        <slot name="slotInfo">
+                <span>Property passed from panrent {childName} {boolVal} </br></span>
+        </slot>
+        <slot></slot>
+        
 </template>

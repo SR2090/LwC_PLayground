@@ -1,6 +1,13 @@
 <template>
-    
     <lightning-card title="Parent To Child">
-        <p class='slds-p-around_small'>Arunava's <c-child-component child-name={dataToChild}></c-child-component></p>
+        <p class='slds-p-around_small'>Arunava's </p>
+        <c-child-component child-name={dataToChild} bool-val  class='slds-p-around_small'>
+            <!-- named slot -->
+            <template if:true={boolVal} slot="slotInfo">
+                <span> || From Slot Son => {dataToChild}</span>
+            </template>
+            <!-- this goes inside unamed slot -->
+            <div>This goes in the unamed slot</div>
+        </c-child-component>
     </lightning-card>
 </template>
