@@ -1,13 +1,4 @@
 <template>
-    <lightning-card title="Room Capacity ">
-        <div class="slds-m-top_medium slds-m-bottom_x-large"></div>
-        <!-- Simple -->
-        <div class="slds-p-around_medium lgc-bg">
-            <lightning-tile label= {room.roomName} style="font-weight:800" href="#">
-                <p class="slds-truncate" title={room.roomCapacity} style="color:red;">Room Capacity: {room.roomCapacity}</p>
-            </lightning-tile>
-        </div>
-    </lightning-card>
     <!-- adding slots named and unamed-->
     <slot name="roomInfo"></slot>
     <slot></slot>
