@@ -10,6 +10,7 @@ export default class PublicMethodParent extends LightningElement {
         // first i need to select the child component using document.querySelector
         const childComponent = document.querySelector('c-public-method-child');
         // then i need to call the child component method
-        childComponent.selectCheckBox(this.inputVal);
+        const msg = childComponent.selectCheckBox(this.inputVal);
+        console.log("Returned Message", msg);
     }    
 }
