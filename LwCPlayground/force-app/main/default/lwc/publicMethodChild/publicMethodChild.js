@@ -3,15 +3,13 @@ import { LightningElement, track } from 'lwc';
 export default class PublicMethodChild extends LightningElement {
     @track value = ['red'];
 
-    get options() {
-        return [
-            { label: 'Red', value: 'red' },
-            { label: 'Blue', value: 'blue' },
-            { label: 'Green', value: 'green' },
-            { label: 'Orange', value: 'orange' },
-            { label: 'Pink', value: 'pink' },
-        ];
-    }
+    options = [
+        { label: 'Red', value: 'red' },
+        { label: 'Blue', value: 'blue' },
+        { label: 'Green', value: 'green' },
+        { label: 'Orange', value: 'orange' },
+        { label: 'Pink', value: 'pink' },
+    ];
 
     get selectedValues() {
         return this.value.join(',');
