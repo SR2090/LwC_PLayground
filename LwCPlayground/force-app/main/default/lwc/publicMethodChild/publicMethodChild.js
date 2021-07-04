@@ -1,7 +1,7 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, track } from 'lwc';
 
 export default class PublicMethodChild extends LightningElement {
-    value = ['option1'];
+    @track value = [];
 
     get options() {
         return [
