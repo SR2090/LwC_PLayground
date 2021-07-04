@@ -1,4 +1,4 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement, track, api } from 'lwc';
 
 export default class PublicMethodChild extends LightningElement {
     @track value = ['red'];
@@ -19,4 +19,12 @@ export default class PublicMethodChild extends LightningElement {
     // handleChange(e) {
     //     this.value = e.detail.value;
     // }
+
+    // method to take input from parent component and htne select the checkbox here
+    // this must be called from the parent method so we need to make it public.
+    @api
+    selectCheckBox(ValueOfCheckBox){
+
+    }
+
 }
