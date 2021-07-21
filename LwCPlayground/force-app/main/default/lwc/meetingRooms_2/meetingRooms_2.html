@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Banquet Halls (Parent To Child Data)">
+        <ul>
+            <!-- {roomName:'A-01', roomCapacity:'12'} -->
+            <template for:each={MeetingRooms} for:item="eachRoom">
+                   <li key={eachRoom.roomName} style="padding: 10px">
+                       <!-- We will call the child component here -->
+                       <!-- Public api will also be converted to kebab case all lower case-->
+                        <c-meeting-room_2 room={eachRoom}>
+                            <!-- Adding child component to pass it as markup -->
+                            <!-- <lightning-card title="Room Capacity "> -->
+                                <!-- <div class="slds-m-top_medium slds-m-bottom_x-large"></div> -->
+                                <!-- Simple -->
+                                <!-- <div class="slds-p-around_medium lgc-bg">
+                                    <lightning-tile label= {eachRoom.roomName} style="font-weight:800" href="#">
+                                        <p class="slds-truncate" title={eachRoom.roomCapacity} style="color:red;">Room Capacity: {eachRoom.roomCapacity}</p>
+                                    </lightning-tile>
+                                </div>
+                            </lightning-card> -->
+                        </c-meeting-room_2>
+                   </li>  
+            </template>
+        </ul>
+    </lightning-card>
+</template>
