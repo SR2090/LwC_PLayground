@@ -1,3 +1,5 @@
 import { LightningElement } from 'lwc';
 
-export default class BmIHelper extends LightningElement {}
+export default class BmIHelper extends LightningElement {
+    
+}

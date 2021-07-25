@@ -24,12 +24,12 @@ export default class BMICalculator extends LightningElement {
    
     handleClick(event){
         this.btnView = true;
-        const evt = new ShowToastEvent({
-            title: 'Blank input',
-            message: 'Please enter input values',
-            variant: 'error',
-            mode: 'dismissable'
-        });
+        // const evt = new ShowToastEvent({
+        //     title: 'Blank input',
+        //     message: 'Please enter input values',
+        //     variant: 'error',
+        //     mode: 'dismissable'
+        // });
         if(typeof this.BmiData.Height == "undefined" || typeof this.BmiData.Weight == "undefined"){
             this.dispatchEvent(evt);    
         }else{
