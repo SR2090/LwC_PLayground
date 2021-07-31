@@ -21,7 +21,7 @@ export default class CreateRecordLwc_LDS extends LightningElement {
         const fields = {
             "Name" : this.Name,
             "Phone" : this.PhNumber,
-            "purchase_department_email__c": this.Website,
+            "Website": this.Website,
         };
         // Create a Js object to map these fields to their object name
         // takes an object name
