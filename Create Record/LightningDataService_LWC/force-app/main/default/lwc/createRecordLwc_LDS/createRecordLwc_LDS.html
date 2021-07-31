@@ -4,9 +4,9 @@
             <lightning-layout-item size="6" padding="around-small">
                 <lightning-card title="Account Creation">
                     <!-- take name, phone number and website as input -->
-                    <lightning-input name="Name" label="Name" onchange={accountNameChangeHandler}></lightning-input>
-                    <lightning-input name="Phone Number" label="PhNumber" onchange={accountPhoneNumberChangeHandler}></lightning-input>
-                    <lightning-input name="Website" label="Website" onchange={accountWebsiteChangeHandler}></lightning-input>
+                    <lightning-input name="Name" label="Name"  onchange={accountNameChangeHandler}></lightning-input>
+                    <lightning-input name="Phone Number" label="PhNumber" type="phone" onchange={accountPhoneNumberChangeHandler}></lightning-input>
+                    <lightning-input name="Website" label="Website" type="url" onchange={accountWebsiteChangeHandler}></lightning-input>
                 </lightning-card>
             </lightning-layout-item>
             <lightning-layout-item size="6" padding="around small">
