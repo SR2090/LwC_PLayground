@@ -1,5 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 import { createRecord, getRecord } from 'lightning/uiRecordApi';
+import Account from '@salesforce/schema/Case.Account';
 const fields = ['Account.Name', 'Account.Phone', 'Account.Website'];
 export default class CreateRecordLwc_LDS extends LightningElement {
     Name;
@@ -7,7 +8,7 @@ export default class CreateRecordLwc_LDS extends LightningElement {
     Website;
     recordId;
 
-    @wire(getRecord, {recordId:'$recordId', fields: this.fields});
+    @wire(getRecord, {recordId:'$recordId', fields: this.fields}) accountRecord;
 
     accountNameChangeHandler(event){
         this.Name = event.detail.value;
@@ -41,6 +42,24 @@ export default class CreateRecordLwc_LDS extends LightningElement {
             this.recordId = response.id;
         }).catch(error => {
             console.log(error);
-        });
+        })
+    }
+    get getAccountName(){
+        if(this.accountRecord.data){
+            return this.accountRecord.data.fields.Name.value;
+        }
+        return undefined;
+    };
+    get getAccountPhone(){
+        if(this.accountRecord.data){
+            return this.accountRecord.data.fields.Phone.value;
+        }
+        return undefined;
+    }
+    get getAccountWebsite(){
+        if(this.accountRecord.data){
+            return this.accountRecord.data.fields.Website.value;
+        }
+        return undefined;
     }
 }
