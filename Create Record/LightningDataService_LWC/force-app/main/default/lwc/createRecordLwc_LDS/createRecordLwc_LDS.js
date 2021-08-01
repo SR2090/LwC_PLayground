@@ -1,14 +1,13 @@
 import { LightningElement, wire } from 'lwc';
 import { createRecord, getRecord } from 'lightning/uiRecordApi';
-import Account from '@salesforce/schema/Case.Account';
-const fields = ['Account.Name', 'Account.Phone', 'Account.Website'];
+const fieldArray = ['Account.Name', 'Account.Phone', 'Account.Website'];
 export default class CreateRecordLwc_LDS extends LightningElement {
     Name;
     PhNumber;
     Website;
     recordId;
 
-    @wire(getRecord, {recordId:'$recordId', fields: this.fields}) accountRecord;
+    @wire(getRecord, {recordId:'$recordId', fields: fieldArray}) accountRecord;
 
     accountNameChangeHandler(event){
         this.Name = event.detail.value;
