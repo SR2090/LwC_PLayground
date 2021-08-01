@@ -1,9 +1,14 @@
-import { LightningElement } from 'lwc';
-import { createRecord } from 'lightning/uiRecordApi';
+import { LightningElement, wire } from 'lwc';
+import { createRecord, getRecord } from 'lightning/uiRecordApi';
+const fields = ['Account.Name', 'Account.Phone', 'Account.Website'];
 export default class CreateRecordLwc_LDS extends LightningElement {
     Name;
     PhNumber;
     Website;
+    recordId;
+
+    @wire(getRecord, {recordId:'$recordId', fields: this.fields});
+
     accountNameChangeHandler(event){
         this.Name = event.detail.value;
     }
@@ -33,6 +38,7 @@ export default class CreateRecordLwc_LDS extends LightningElement {
         }
         createRecord(recordInput).then(response => {
             console.log('Account has been created ', response.id)
+            this.recordId = response.id;
         }).catch(error => {
             console.log(error);
         });
