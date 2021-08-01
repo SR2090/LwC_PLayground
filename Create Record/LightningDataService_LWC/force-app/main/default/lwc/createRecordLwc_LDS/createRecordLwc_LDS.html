@@ -2,7 +2,7 @@
     <lightning-card title="LDS Account Create Record Method">
         <lightning-layout>
             <lightning-layout-item size="6" padding="around-small">
-                <lightning-card title="Account Creation">
+                <lightning-card title="Account Creation createRecord">
                     <!-- take name, phone number and website as input -->
                     <lightning-input name="Name" label="Name"  onchange={accountNameChangeHandler}></lightning-input>
                     <lightning-input name="Phone Number" label="PhNumber" type="phone" onchange={accountPhoneNumberChangeHandler}></lightning-input>
@@ -11,7 +11,11 @@
                 </lightning-card>
             </lightning-layout-item>
             <lightning-layout-item size="6" padding="around small">
-
+                <lightning-card title="Get Account Details getRecord">
+                    <p><lightning-formatted-text value={getAccountName}></lightning-formatted-text></p>
+                    <p><lightning-formatted-text value={getAccountPhone}></lightning-formatted-text></p>
+                    <p><lightning-formatted-text value={getAccountWebsite}></lightning-formatted-text></p>
+                </lightning-card>
             </lightning-layout-item>
         </lightning-layout>
     </lightning-card>
