@@ -17,7 +17,13 @@
             </lightning-layout-item>
             <lightning-layout-item size=6 padding="around-small">
                 <lightning-card title="Display Record Form">
-    
+                    <lightning-record-view-form record-id={recordId}>
+                        <div class="slds-box">
+                            <p><lightning-output-field field-name="Name"></lightning-output-field></p>
+                            <p><lightning-output-field field-name="Phone"></lightning-output-field></p>
+                            <p><lightning-output-field field-name="Website"></lightning-output-field></p>
+                        </div>
+                    </lightning-record-view-form>
                 </lightning-card>
             </lightning-layout-item>
         </lightning-layout>
