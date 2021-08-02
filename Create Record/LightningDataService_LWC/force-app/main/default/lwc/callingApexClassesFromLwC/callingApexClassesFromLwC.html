@@ -1,7 +1,11 @@
 <template>
     <lightning-card title="Get me all the accounts">
         <template if:true={isAccountsResolved}>
-            <template for-each:{accounts}
+            <ul>
+                <template for:each={accounts} for:item="account">
+
+                </template>
+            </ul>
         </template>
     </lightning-card>
 </template>
