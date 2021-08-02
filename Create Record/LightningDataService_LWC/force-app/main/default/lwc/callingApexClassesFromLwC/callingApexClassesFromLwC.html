@@ -4,10 +4,10 @@
             <ul>
                 <template for:each={accounts} for:item="account">
                     <li key={account.id}>
-                            <lightning-title label={account.Name}>
-                                <lightning-icon slot="media" icon-name="standard:account"></lightning-icon>
-                                <p class="slds-truncate" title={account.Phone}>{account.Phone}</p>
-                            </lightning-title>
+                        <lightning-title label={account.Name}>
+                            <lightning-icon slot="media" icon-name="standard:account"></lightning-icon>
+                            <p class="slds-truncate" title={account.Phone}>{account.Phone}</p>
+                        </lightning-title>
                     </li>
                 </template>
             </ul>
