@@ -3,7 +3,7 @@ import gettheAccounts from "@salesforce/apex/AccountManager.getAccounts"
 export default class CallingApexClassesFromLwC extends LightningElement {
     
     // gets the accounts from the apex class method getAccounts
-    @wire(getAccounts) accounts;
+    @wire(gettheAccounts) accounts;
 
     isAccountsResolved(){
         if(this.accounts){
