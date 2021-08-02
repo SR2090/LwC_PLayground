@@ -12,4 +12,4 @@ export default class RecordFormBasedComponent extends LightningElement {
     handleSuccess(event){
         this.recordId = event.detail.recordId;
     }
-}
+}  
