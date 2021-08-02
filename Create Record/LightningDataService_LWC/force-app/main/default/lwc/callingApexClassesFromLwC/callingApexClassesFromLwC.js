@@ -1,5 +1,5 @@
 import { LightningElement, wire } from 'lwc';
-import getAccounts from "@salesforce/apex/AccountManger"
+import gettheAccounts from "@salesforce/apex/AccountManager.getAccounts"
 export default class CallingApexClassesFromLwC extends LightningElement {
     
     // gets the accounts from the apex class method getAccounts
