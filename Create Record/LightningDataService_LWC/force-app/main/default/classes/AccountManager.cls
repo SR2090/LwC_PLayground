@@ -1,5 +1,10 @@
 public with sharing class AccountManager {
-    public AccountManager() {
-
+    @AuraEnabled(cacheable=true)
+    public static List<Accounts> getAccounts(){
+        try {
+            
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
     }
 }
