@@ -2,7 +2,8 @@
     <lightning-card title="Get me all the accounts">
         <template if:true={isAccountsResolved}>
             <ul>
-                <template for:each={accounts} for:item="account">
+                <!-- accounts.data contains data from the response from the server -->
+                <template for:each={accounts.data} for:item="account">
                     <li key={account.id}>
                         <lightning-card title={account.Name}>
                             <lightning-icon slot="media" icon-name="standard:account"></lightning-icon>
