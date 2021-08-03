@@ -1,5 +1,9 @@
 <template>
-    <lightning-card title="Get me all the accounts">
+    <lightning-card title="Get these accounts">
+        <lightning-input type="number" label="Number of Accounts" onchange={getAccountNumber}></lightning-input>
+
+        <p><lightning-button label="Get Accounts" onclick={getAccounts}></lightning-button></p>
+
         <template if:true={isAccountsResolved}>
             <ul>
                 <!-- accounts.data contains data from the response from the server -->
