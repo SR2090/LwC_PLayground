@@ -1,3 +1,17 @@
 <template>
-    
+    <lightning-card title="Get me all the accounts">
+        <template if:true={isAccountsResolved}>
+            <ul>
+                <!-- accounts.data contains data from the response from the server -->
+                <template for:each={accounts} for:item="account">
+                    <li key={account.id}>
+                        <lightning-card title={account.Name}>
+                            <lightning-icon slot="media" icon-name="standard:account"></lightning-icon>
+                            <p class="slds-truncate" title={account.Phone}>{account.Phone}</p>
+                        </lightning-card>
+                    </li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
 </template>
