@@ -1,5 +1,5 @@
 import { LightningElement, api } from 'lwc';
-
+import { fireEvent } from '../pubsub/pubsub';
 export default class MeetingRoom extends LightningElement {
     @api meetingRoomInfo = {roomName:'A-01', roomCapacity:'12'}
 
