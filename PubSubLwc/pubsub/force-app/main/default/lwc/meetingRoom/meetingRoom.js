@@ -1,5 +1,5 @@
 import { LightningElement, api, wire } from 'lwc';
-import { fireEvent } from '../pubsub/pubsub';
+import { fireEvent } from 'c/pubsub';
 // we need current page reference so we will import that here
 import { CurrentPageReference } from 'lightning/navigation';
 export default class MeetingRoom extends LightningElement {
